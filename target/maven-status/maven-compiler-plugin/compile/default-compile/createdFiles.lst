@@ -1,0 +1,8 @@
+newpage\FlightBooking.class
+newpage\SearchHotel.class
+newpage\BaseTest.class
+utils\TimeUtils.class
+newpage\FlightTestCases.class
+newpage\VeMayBay.class
+newpage\TestCase.class
+newpage\HaveNoTicket.class

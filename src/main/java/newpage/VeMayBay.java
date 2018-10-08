@@ -34,32 +34,7 @@ public class VeMayBay {
 		testng.setTestSuites(suites);
 
 		testng.run();
-		
-		
-		
-		// TODO Auto-generated method stub
-		System.out.println("Hello World!");
-		System.out.println("Hello Hien!");
-		WebDriver driver = new FirefoxDriver();
-	    driver.get("https://www.tripi.vn");
-		Select oSelect = new Select(driver.findElement(By.xpath("//*[@id='flight-from-airport-value']")));
-		oSelect.selectByVisibleText("Hà Nội (HAN)");
 				
 		}
-	
-	
-	
-	
-	/*@BeforeTest
-	public void beforeTest() throws Exception {
-		driver = new FirefoxDriver();
-	}
-
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}*/
-
-
 
 }
