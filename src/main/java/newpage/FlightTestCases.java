@@ -22,8 +22,7 @@ public class FlightTestCases extends BaseTest
 	             
 		        System.out.println("-----Thuc hien viec tim kiem ve may bay tu "+from_airport+" den "+to_airport+".Tong so hanh khach: "+(adult_num+child_num+infant_num));
 		       // Click vao button khu hoi		
-				WebElement returnButton = driver.findElement(By.cssSelector("span.fw-item:nth-child(2)"));			
-				returnButton.click();		
+				driver.findElement(By.cssSelector("span.fw-item:nth-child(2)")).click();		
 						
 				// Nhap departure station	
 				WebElement departureStation = driver.findElement(By.cssSelector("#flight-from-airport-value"));		
@@ -188,8 +187,7 @@ public class FlightTestCases extends BaseTest
 					System.out.println("Ngay ve: "+to_date+"/"+(nowup.get(Calendar.MONTH)+1)+"-----------");
 				}
 				/// Change passengers		
-				WebElement passenger = driver.findElement(By.cssSelector(".ui-selectmenu-text"));		
-				passenger.click();		
+				driver.findElement(By.cssSelector(".ui-selectmenu-text")).click();		
 				
 				WebElement adultNum = driver.findElement(By.cssSelector(".centered > li:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(5) > button:nth-child(1)"));
 				for (int i=1; i < adult_num; i++)
@@ -384,9 +382,10 @@ public class FlightTestCases extends BaseTest
     					dropdown2.selectByVisibleText("Nữ");
     					TimeUtils.sleep(5);			
     			
-    				/*	//Chon mua them hanh ly
-    					//The chon hanh ly
-    					WebElement baggagesDiv = driver.findElement(By.cssSelector(".row"));
+    				 /*  //Chon mua them hanh ly
+    				  //The chon hanh ly
+    					WebElement baggagesDiv = driver.findElement(By.cssSelector(".form-control.baggage.ng-pristine.ng-untouched.ng-valid"));
+    					baggagesDiv.click();
     					//chon hanh ly hanh khach thu nhat - chon goi 15kg
     					WebElement baggagesNum = baggagesDiv.findElement(By.cssSelector(".form-control.baggage"));
     					Select dropdown3= new Select(baggagesNum);	
@@ -447,7 +446,9 @@ public class FlightTestCases extends BaseTest
     					TimeUtils.sleep(5);		
     }
 	
-	//------------------------------------------- Method 4
+	//------------------------------------------- Method 4	
+	//@Parameters({"from_airport_noflight","to_airport_noflight","from_date_noflight_add", "to_date_noflight_add","adult_num_noflight","child_num_noflight","infant_num_noflight"})
+	//@Test(priority = 4, enabled = true)
 	@Parameters({"from_airport_noflight","to_airport_noflight","from_date_noflight_add", "to_date_noflight_add","adult_num_noflight","child_num_noflight","infant_num_noflight"})
 	@Test(priority = 4, enabled = true)
 	public void CheckHaveNoFlight(String from_airport_noflight, String to_airport_noflight, int from_date_noflight_add, int to_date_noflight_add, int adult_num_noflight, int child_num_noflight, int infant_num_noflight)
@@ -540,8 +541,10 @@ public class FlightTestCases extends BaseTest
 	
 	
 	//------------------------------------------- Method 6
+	//@Parameters({"from_airport_allInfor","to_airport_allInfor","from_date_allInfor_add", "to_date_allInfor_add","adult_num_allInfor","child_num_allInfor","infant_num_allInfor","airlines_from_allInfor","airlines_to_allInfor"})
+		//@Test(priority = 5, enabled = true)
 	@Parameters({"from_airport_allInfor","to_airport_allInfor","from_date_allInfor_add", "to_date_allInfor_add","adult_num_allInfor","child_num_allInfor","infant_num_allInfor","airlines_from_allInfor","airlines_to_allInfor"})
-	@Test (priority = 1, enabled = true)
+	@Test (priority = 6, enabled = true)
 	//them bien hang bay se chon ve de book
 	public void CheckAllInfor 	(String from_airport_allInfor, String to_airport_allInfor, int from_date_allInfor_add, int to_date_allInfor_add, int adult_num_allInfor, int child_num_allInfor, int infant_num_allInfor, String airlines_from_allInfor, String airlines_to_allInfor)
     {
@@ -944,6 +947,174 @@ public class FlightTestCases extends BaseTest
     			System.out.println("2. Sau khi an nut Xac nhan dat ve, Thong tin chuyen bay hien thi chinh xac");
     			System.out.println("==> PASSED");
     } 
+
+	//------------------------------------------- Method 7
+	@Parameters({"from_airport_wrongarrivalplace"})
+	@Test (priority = 7, enabled = true)
+	
+	public void SearchFlightWrongArrivalPlace (String from_airport_wrongarrivalplace)
+	{
+		System.out.println("-----7. Thuc hien viec kiem tra thong bao loi khi tim kiem ve may bay nhap vao diem den trung voi diem di : tu "+from_airport_wrongarrivalplace+" den "+from_airport_wrongarrivalplace);	      	
+					
+			// Nhap departure station	
+			WebElement departureStation = driver.findElement(By.cssSelector("#flight-from-airport-value"));		
+			departureStation.sendKeys(from_airport_wrongarrivalplace);		
+			TimeUtils.sleep(2);		
+			departureStation.sendKeys(Keys.RETURN);		
+				
+			// Nhap arrival station		
+			WebElement arrivalStation = driver.findElement(By.cssSelector("#flight-to-airport-value"));		
+			arrivalStation.sendKeys(from_airport_wrongarrivalplace);		
+			TimeUtils.sleep(2);		
+			arrivalStation.sendKeys(Keys.RETURN);
+			
+			// Click tim kiem								
+			WebElement searchButton = driver.findElement(By.cssSelector(".flight-search-button"));		
+			searchButton.click();		
+			TimeUtils.sleep(5);
+			
+			String actualTitle = driver.findElement(By.cssSelector(".text-danger.text-left.form-group.red.ng-binding.ng-scope")).getText();
+			if (actualTitle.contains("Điểm đến không được trùng với điểm khởi hành. Vui lòng lựa chọn lại.")) 
+			{
+				System.out.println(actualTitle);
+				System.out.println("Test case: Passed");
+			} 
+			else
+			{
+			    System.out.println("Test case : Failed");
+			}			
+	}
+
+	
+	//------------------------------------------- Method 8
+	@Parameters({"from_airport_containvietnamese","to_airport_containvietnamese"})
+	@Test (priority = 8, enabled = true)
+	public void CustomerInfoContainVietnameseCharacters (String from_airport_containvietnamese, String to_airport_containvietnamese)
+	{
+			System.out.println("8. Kiem tra xu ly bao loi khi nhap thong tin hanh khach la tieng viet co dau ");
+			// Nhap departure station	
+			WebElement departureStation = driver.findElement(By.cssSelector("#flight-from-airport-value"));		
+			departureStation.sendKeys(from_airport_containvietnamese);		
+			TimeUtils.sleep(2);		
+			departureStation.sendKeys(Keys.RETURN);		
+						
+			// Nhap arrival station		
+			WebElement arrivalStation = driver.findElement(By.cssSelector("#flight-to-airport-value"));		
+			arrivalStation.sendKeys(to_airport_containvietnamese);		
+			TimeUtils.sleep(2);		
+			arrivalStation.sendKeys(Keys.RETURN);
+					
+			// Click tim kiem								
+			WebElement searchButton = driver.findElement(By.cssSelector(".flight-search-button"));		
+			searchButton.click();		
+			TimeUtils.sleep(20);
+			//Chon ve chieu di		
+    	       
+			WebElement outBoundTicketsDiv = driver.findElement(By.cssSelector("#outBoundTickets"));		
+			List<WebElement> outboundTickets = outBoundTicketsDiv.findElements(By.cssSelector(".ticket-info"));		
+			System.out.println("Chon ve chieu di:");		
+			for (WebElement ticket : outboundTickets) 
+			{		
+				WebElement logo = ticket.findElement(By.cssSelector(".alogo"));	
+    			String agency = logo.getAttribute("alt");	
+    					
+    			if (agency.contains("Jetstar")) 
+    			{				
+    					WebElement selectBtnob = ticket.findElement(By.cssSelector(".flight-select-single-ticket"));
+    					selectBtnob.click();
+    					TimeUtils.sleep(2);
+    					System.out.println(agency);
+    					break;
+    			}	
+    		}	
+    			
+    			//Xac nhan chon ve		
+    			WebElement selectedFlightDiv = driver.findElement(By.cssSelector("#selected-flight"));		
+    			WebElement confirmBookTicketbtn = selectedFlightDiv.findElement(By.cssSelector(".flight-search-booking-ticket"));		
+    			confirmBookTicketbtn.click();		
+    			TimeUtils.sleep(5);		
+    					
+    			//Nhap tt hanh khach thu nhat			
+    			WebElement firstGuestDiv = driver.findElement(By.cssSelector("#adult-0"));	
+    			//Nhap lastname	
+    			WebElement lastNametext = firstGuestDiv.findElement(By.cssSelector(".form-control.last-name"));
+    			lastNametext.clear();
+    			lastNametext.sendKeys("Nguyễn");	
+    			//Nhap firstname				
+    			WebElement firstNametext = firstGuestDiv.findElement(By.cssSelector(".form-control.first-name"));
+    			firstNametext.clear();
+    			firstNametext.sendKeys("Văn An");
+    			//Chon gioi tinh	
+    			WebElement genderOfFirstGuestDiv = firstGuestDiv.findElement(By.cssSelector(".form-control.gender"));	
+    			Select dropdown= new Select(genderOfFirstGuestDiv);	
+    			dropdown.selectByVisibleText("Nam");	
+    			TimeUtils.sleep(3);				    					
+    		
+    				 /*  //Chon mua them hanh ly
+    				  //The chon hanh ly
+    					WebElement baggagesDiv = driver.findElement(By.cssSelector(".form-control.baggage.ng-pristine.ng-untouched.ng-valid"));
+    					baggagesDiv.click();
+    					//chon hanh ly hanh khach thu nhat - chon goi 15kg
+    					WebElement baggagesNum = baggagesDiv.findElement(By.cssSelector(".form-control.baggage"));
+    					Select dropdown3= new Select(baggagesNum);	
+    					//dropdown3.selectByVisibleText("Gói (Bag) 15 kg - 160.000đ");	
+    					 dropdown3.selectByIndex(1);
+    					TimeUtils.sleep(5);	*/	
+    					
+    			//Nhap thong tin lien he
+    			//tim the thong tin lien he
+    			WebElement contactDiv = driver.findElement(By.cssSelector("#contact-info"));				
+    			//Chon gioi tinh
+    			WebElement contactGender = contactDiv.findElement(By.cssSelector("#ticket-booking-select-title"));
+    			Select dropdown4= new Select(contactGender);	
+    			dropdown4.selectByVisibleText("Ông");	
+    									
+    			//Nhap Ho
+    			WebElement lastNametext3 = contactDiv.findElement(By.cssSelector(".form-control.last-name"));	
+    			lastNametext3.clear();
+    			lastNametext3.sendKeys("Nguyen");	
+    			//Nhap Ten
+    			WebElement firstNametext3 = contactDiv.findElement(By.cssSelector(".form-control.first-name"));	
+    			firstNametext3.clear();
+    			firstNametext3.sendKeys("Van An")	;
+    			//Nhap email
+    			WebElement emailContact = contactDiv.findElement(By.cssSelector(".form-control.email"));	
+    			emailContact.clear();
+    			emailContact.sendKeys("test@gmail.com")	;
+    			//Nhap so dien thoai
+    			WebElement phoneContact = contactDiv.findElement(By.cssSelector(".form-control.phone1"));	
+    			phoneContact.clear();
+    			phoneContact.sendKeys("0986111111")	;
+    			//Chon phuong thuc thanh toan
+    			//Tim the pttt
+    			TimeUtils.sleep(2);	
+    			WebElement paymentMethodDiv = driver.findElement(By.cssSelector(".row"));
+    			//WebElement paymentVisa = paymentMethodDiv.findElement(By.cssSelector("#payment-method-1"));
+    			WebElement paymentVisa = paymentMethodDiv.findElement(By.cssSelector("#payment-method-1"));
+    			paymentVisa.click();
+    			// click nut thanh toan
+    			WebElement paymentButton = driver.findElement(By.cssSelector(".flight-initiate-checkout"));
+    			paymentButton.click();				
+    			TimeUtils.sleep(5);		
+    					
+    			//an nut Xac nhan dong y thanh toan
+    			WebElement confirmBtnDiv = driver.findElement(By.cssSelector(".modal-footer"));
+    			WebElement confirmBtn = confirmBtnDiv.findElement(By.cssSelector(".modal-footer > button:nth-child(2)"));
+    			confirmBtn.click();
+    			TimeUtils.sleep(5);
+    					
+    			String actualTitle = driver.findElement(By.cssSelector(".text-danger")).getText();
+    			if (actualTitle.contains("Vui lòng sử dụng tiếng Việt không dấu cho Họ và Tên đệm của hành khách thứ 1")) 
+    			{
+    				System.out.println(actualTitle);
+    				System.out.println("Test case: Passed");
+    			} 
+    			else
+    			{
+    				System.out.println(actualTitle);
+    				System.out.println("Test case : Failed");
+    			}  				
+	}
 }
 
 

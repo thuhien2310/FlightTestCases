@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,31 +91,46 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 3 failed,   9 passed</span>
+                    <span class="method-stats">16 methods,  6 skipped,  10 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="BookFlight(SGN, BKK, 10, 15, 2, 0, 0)">BookFlight(SGN, BKK, 10, 15, 2, 0, 0)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="BookFlight">BookFlight</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)">CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckAllInfor">CheckAllInfor</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckAllInfor(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air)">CheckAllInfor(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckFlightInformation">CheckFlightInformation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckHaveNoFlight">CheckHaveNoFlight</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CustomerInfoContainVietnameseCharacters">CustomerInfoContainVietnameseCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="SearchFlightWrongArrivalPlace">SearchFlightWrongArrivalPlace</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,6 +142,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="BookFlight(DAD, SGN, 3, 9, 2, 0, 0)">BookFlight(DAD, SGN, 3, 9, 2, 0, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)">CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -146,17 +166,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckFlightInformation(PQC, SGN, 12, 16, 2, 0, 0)">CheckFlightInformation(PQC, SGN, 12, 16, 2, 0, 0)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckHaveNoFlight(HPH, HUI, 3, 5, 1, 0, 0)">CheckHaveNoFlight(HPH, HUI, 3, 5, 1, 0, 0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CheckHaveNoFlight(HAN, CGK, 16, 20, 1, 0, 0)">CheckHaveNoFlight(HAN, CGK, 16, 20, 1, 0, 0)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="CustomerInfoContainVietnameseCharacters(SGN, HAN)">CustomerInfoContainVietnameseCharacters(SGN, HAN)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -167,6 +182,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="SearchFlight(HAN, PQC, 3, 5, 2, 0, 0)">SearchFlight(HAN, PQC, 3, 5, 2, 0, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="newpage.FlightTestCases" class="method navigator-link" hash-for-method="SearchFlightWrongArrivalPlace(SGN)">SearchFlightWrongArrivalPlace(SGN)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -181,67 +201,152 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">newpage.FlightTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="BookFlight(SGN, BKK, 10, 15, 2, 0, 0)">
-                  </a> <!-- BookFlight(SGN, BKK, 10, 15, 2, 0, 0) -->
+                  <a name="BookFlight">
+                  </a> <!-- BookFlight -->
                   <span class="method-name">BookFlight</span>
-                  <span class="parameters">(SGN, BKK, 10, 15, 2, 0, 0)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: #gateway
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.B7j2wDohO7cu, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=19556.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
-Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
-*** Element info: {Using=css selector, value=#gateway}
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at newpage.FlightTestCases.BookFlight(FlightTestCases.java:439)
-... Removed 38 stack frames
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)">
-                  </a> <!-- CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air) -->
+                  <a name="CheckAllInfor">
+                  </a> <!-- CheckAllInfor -->
                   <span class="method-name">CheckAllInfor</span>
-                  <span class="parameters">(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at newpage.FlightTestCases.CheckAllInfor(FlightTestCases.java:697)
-... Removed 40 stack frames
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckAllInfor(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air)">
-                  </a> <!-- CheckAllInfor(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air) -->
-                  <span class="method-name">CheckAllInfor</span>
-                  <span class="parameters">(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at newpage.FlightTestCases.CheckAllInfor(FlightTestCases.java:697)
-... Removed 40 stack frames
+                  <a name="CheckFlightInformation">
+                  </a> <!-- CheckFlightInformation -->
+                  <span class="method-name">CheckFlightInformation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckHaveNoFlight">
+                  </a> <!-- CheckHaveNoFlight -->
+                  <span class="method-name">CheckHaveNoFlight</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CustomerInfoContainVietnameseCharacters">
+                  </a> <!-- CustomerInfoContainVietnameseCharacters -->
+                  <span class="method-name">CustomerInfoContainVietnameseCharacters</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SearchFlightWrongArrivalPlace">
+                  </a> <!-- SearchFlightWrongArrivalPlace -->
+                  <span class="method-name">SearchFlightWrongArrivalPlace</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timeout loading page after 300000ms
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-1D8CK3P&apos;, ip: &apos;192.168.0.126&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;10.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Asrock.DESKTOP-1D8CK3P\AppData\Local\Temp\rust_mozprofile.eAE89GrHnyZO, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=61.0.2, platformVersion=10.0, moz:processID=468.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
+Session ID: 7746b323-f446-4fdc-b520-34202d51133e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at newpage.BaseTest.beforeTest(BaseTest.java:20)
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -254,6 +359,14 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
                   </a> <!-- BookFlight(DAD, SGN, 3, 9, 2, 0, 0) -->
                   <span class="method-name">BookFlight</span>
                   <span class="parameters">(DAD, SGN, 3, 9, 2, 0, 0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)">
+                  </a> <!-- CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air) -->
+                  <span class="method-name">CheckAllInfor</span>
+                  <span class="parameters">(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -282,14 +395,6 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckFlightInformation(PQC, SGN, 12, 16, 2, 0, 0)">
-                  </a> <!-- CheckFlightInformation(PQC, SGN, 12, 16, 2, 0, 0) -->
-                  <span class="method-name">CheckFlightInformation</span>
-                  <span class="parameters">(PQC, SGN, 12, 16, 2, 0, 0)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="CheckHaveNoFlight(HPH, HUI, 3, 5, 1, 0, 0)">
                   </a> <!-- CheckHaveNoFlight(HPH, HUI, 3, 5, 1, 0, 0) -->
                   <span class="method-name">CheckHaveNoFlight</span>
@@ -298,10 +403,10 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckHaveNoFlight(HAN, CGK, 16, 20, 1, 0, 0)">
-                  </a> <!-- CheckHaveNoFlight(HAN, CGK, 16, 20, 1, 0, 0) -->
-                  <span class="method-name">CheckHaveNoFlight</span>
-                  <span class="parameters">(HAN, CGK, 16, 20, 1, 0, 0)</span>
+                  <a name="CustomerInfoContainVietnameseCharacters(SGN, HAN)">
+                  </a> <!-- CustomerInfoContainVietnameseCharacters(SGN, HAN) -->
+                  <span class="method-name">CustomerInfoContainVietnameseCharacters</span>
+                  <span class="parameters">(SGN, HAN)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -320,6 +425,14 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
                   <span class="parameters">(HAN, PQC, 3, 5, 2, 0, 0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SearchFlightWrongArrivalPlace(SGN)">
+                  </a> <!-- SearchFlightWrongArrivalPlace(SGN) -->
+                  <span class="method-name">SearchFlightWrongArrivalPlace</span>
+                  <span class="parameters">(SGN)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -332,12 +445,15 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;7&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;from_date_add&quot; value=&quot;3&quot;/&gt;
     &lt;parameter name=&quot;to_airport_allInfor&quot; value=&quot;HAN&quot;/&gt;
+    &lt;parameter name=&quot;to_airport_containvietnamese&quot; value=&quot;HAN&quot;/&gt;
     &lt;parameter name=&quot;to_airport_noflight&quot; value=&quot;HUI&quot;/&gt;
     &lt;parameter name=&quot;from_airport_book&quot; value=&quot;DAD&quot;/&gt;
+    &lt;parameter name=&quot;from_airport_containvietnamese&quot; value=&quot;SGN&quot;/&gt;
     &lt;parameter name=&quot;adult_num_flightinfo&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;from_airport_wrongarrivalplace&quot; value=&quot;SGN&quot;/&gt;
     &lt;parameter name=&quot;adult_num_checkairlines&quot; value=&quot;2&quot;/&gt;
     &lt;parameter name=&quot;child_num_noflight&quot; value=&quot;0&quot;/&gt;
     &lt;parameter name=&quot;to_date_flightinfo_add&quot; value=&quot;5&quot;/&gt;
@@ -381,12 +497,15 @@ Session ID: a6141dd3-ed8d-4666-a792-a748184e97a2
       &lt;class name=&quot;newpage.FlightTestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Testone&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;7&quot; name=&quot;Testone&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;from_date_add&quot; value=&quot;3&quot;/&gt;
     &lt;parameter name=&quot;to_airport_allInfor&quot; value=&quot;SIN&quot;/&gt;
+    &lt;parameter name=&quot;to_airport_containvietnamese&quot; value=&quot;DAD&quot;/&gt;
     &lt;parameter name=&quot;to_airport_noflight&quot; value=&quot;CGK&quot;/&gt;
     &lt;parameter name=&quot;from_airport_book&quot; value=&quot;SGN&quot;/&gt;
+    &lt;parameter name=&quot;from_airport_containvietnamese&quot; value=&quot;HAN&quot;/&gt;
     &lt;parameter name=&quot;adult_num_flightinfo&quot; value=&quot;2&quot;/&gt;
+    &lt;parameter name=&quot;from_airport_wrongarrivalplace&quot; value=&quot;HAN&quot;/&gt;
     &lt;parameter name=&quot;adult_num_checkairlines&quot; value=&quot;2&quot;/&gt;
     &lt;parameter name=&quot;child_num_noflight&quot; value=&quot;0&quot;/&gt;
     &lt;parameter name=&quot;to_date_flightinfo_add&quot; value=&quot;16&quot;/&gt;
@@ -470,60 +589,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(16);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'BookFlight')
 data.setCell(0, 2, 'newpage.FlightTestCases')
-data.setCell(0, 3, 141667);
+data.setCell(0, 3, 123088);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'BookFlight')
+data.setCell(1, 1, 'CheckEnoughThreeAirlines')
 data.setCell(1, 2, 'newpage.FlightTestCases')
-data.setCell(1, 3, 124005);
+data.setCell(1, 3, 67942);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'CheckEnoughThreeAirlines')
+data.setCell(2, 1, 'CheckAllInfor')
 data.setCell(2, 2, 'newpage.FlightTestCases')
-data.setCell(2, 3, 81779);
+data.setCell(2, 3, 63970);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'CheckAllInfor')
+data.setCell(3, 1, 'CheckEnoughThreeAirlines')
 data.setCell(3, 2, 'newpage.FlightTestCases')
-data.setCell(3, 3, 80797);
+data.setCell(3, 3, 61621);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'CheckFlightInformation')
 data.setCell(4, 2, 'newpage.FlightTestCases')
-data.setCell(4, 3, 74316);
+data.setCell(4, 3, 52034);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'CheckHaveNoFlight')
+data.setCell(5, 1, 'CustomerInfoContainVietnameseCharacters')
 data.setCell(5, 2, 'newpage.FlightTestCases')
-data.setCell(5, 3, 73273);
+data.setCell(5, 3, 51145);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'CheckFlightInformation')
+data.setCell(6, 1, 'CheckHaveNoFlight')
 data.setCell(6, 2, 'newpage.FlightTestCases')
-data.setCell(6, 3, 73134);
+data.setCell(6, 3, 50610);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'CheckHaveNoFlight')
+data.setCell(7, 1, 'SearchFlight')
 data.setCell(7, 2, 'newpage.FlightTestCases')
-data.setCell(7, 3, 71732);
+data.setCell(7, 3, 47896);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'SearchFlight')
 data.setCell(8, 2, 'newpage.FlightTestCases')
-data.setCell(8, 3, 66237);
+data.setCell(8, 3, 45725);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'CheckEnoughThreeAirlines')
+data.setCell(9, 1, 'SearchFlightWrongArrivalPlace')
 data.setCell(9, 2, 'newpage.FlightTestCases')
-data.setCell(9, 3, 62166);
+data.setCell(9, 3, 9776);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'CheckAllInfor')
+data.setCell(10, 1, 'CustomerInfoContainVietnameseCharacters')
 data.setCell(10, 2, 'newpage.FlightTestCases')
-data.setCell(10, 3, 60664);
+data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SearchFlight')
+data.setCell(11, 1, 'CheckHaveNoFlight')
 data.setCell(11, 2, 'newpage.FlightTestCases')
-data.setCell(11, 3, 45932);
+data.setCell(11, 3, 0);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'CheckFlightInformation')
+data.setCell(12, 2, 'newpage.FlightTestCases')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'BookFlight')
+data.setCell(13, 2, 'newpage.FlightTestCases')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'CheckAllInfor')
+data.setCell(14, 2, 'newpage.FlightTestCases')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'SearchFlightWrongArrivalPlace')
+data.setCell(15, 2, 'newpage.FlightTestCases')
+data.setCell(15, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 minutes</span>
+              <span class="suite-total-time">Total running time: 9 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -556,150 +691,150 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">SearchFlight(HAN, CXR, 3, 5, 2, 0, 0)</span>
-                <span class="method-start">12055 ms</span>
+                <span class="method-start">11903 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">57989 ms</span>
+                <span class="method-start">57630 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">58872 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
-                <span class="method-start">69888 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">130552 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">131215 ms</span>
+                <span class="method-start">58515 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CheckEnoughThreeAirlines(DAD, SGN, 4, 7, 2, 0, 0)</span>
-                <span class="method-start">142358 ms</span>
+                <span class="method-start">69777 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">204524 ms</span>
+                <span class="method-start">131398 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">205279 ms</span>
+                <span class="method-start">132029 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">BookFlight(DAD, SGN, 3, 9, 2, 0, 0)</span>
-                <span class="method-start">216079 ms</span>
+                <span class="method-start">143285 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">340084 ms</span>
+                <span class="method-start">266374 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">340919 ms</span>
+                <span class="method-start">266996 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CheckHaveNoFlight(HPH, HUI, 3, 5, 1, 0, 0)</span>
-                <span class="method-start">361029 ms</span>
+                <span class="method-start">277610 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">432762 ms</span>
+                <span class="method-start">328220 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">433581 ms</span>
+                <span class="method-start">328979 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CheckFlightInformation(DAD, SGN, 3, 5, 2, 0, 0)</span>
-                <span class="method-start">452808 ms</span>
+                <span class="method-start">339449 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">525942 ms</span>
+                <span class="method-start">391483 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">526688 ms</span>
+                <span class="method-start">392059 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CheckAllInfor(PQC, HAN, 7, 14, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
+                <span class="method-start">403091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">467062 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">467821 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SearchFlightWrongArrivalPlace(SGN)</span>
+                <span class="method-start">478900 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">488676 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">489435 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CustomerInfoContainVietnameseCharacters(SGN, HAN)</span>
+                <span class="method-start">499847 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">550992 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">551727 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">SearchFlight(HAN, PQC, 3, 5, 2, 0, 0)</span>
-                <span class="method-start">545889 ms</span>
+                <span class="method-start">562396 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">612127 ms</span>
+                <span class="method-start">610292 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">613008 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">CheckAllInfor(SGN, SIN, 10, 15, 1, 1, 1, Jetstar Airways, VietJet Air)</span>
-                <span class="method-start">632136 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">712933 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">713605 ms</span>
+                <span class="method-start">611176 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CheckEnoughThreeAirlines(HAN, SGN, 4, 7, 2, 0, 0)</span>
-                <span class="method-start">732750 ms</span>
+                <span class="method-start">674148 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">814529 ms</span>
+                <span class="method-start">742090 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">815088 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">BookFlight(SGN, BKK, 10, 15, 2, 0, 0)</span>
-                <span class="method-start">835482 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">977149 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">977666 ms</span>
+                <span class="method-start">742676 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CheckHaveNoFlight(HAN, CGK, 16, 20, 1, 0, 0)</span>
-                <span class="method-start">996956 ms</span>
+                <span class="method-name">BookFlight</span>
+                <span class="method-start">-1539771085467 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">1070229 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">1070792 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CheckFlightInformation(PQC, SGN, 12, 16, 2, 0, 0)</span>
-                <span class="method-start">1090011 ms</span>
+                <span class="method-name">CheckHaveNoFlight</span>
+                <span class="method-start">-1539771085467 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">1164327 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">CheckFlightInformation</span>
+                <span class="method-start">-1539771085467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckAllInfor</span>
+                <span class="method-start">-1539771085467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SearchFlightWrongArrivalPlace</span>
+                <span class="method-start">-1539771085467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CustomerInfoContainVietnameseCharacters</span>
+                <span class="method-start">-1539771085467 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
